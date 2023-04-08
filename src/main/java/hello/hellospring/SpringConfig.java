@@ -1,5 +1,6 @@
 package hello.hellospring;
 
+import hello.hellospring.aop.TimeTraceAop;
 import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
@@ -36,5 +37,12 @@ public class SpringConfig {
 //        return new MemoryMemberRepository();
 //        return new JdbcTemplateMemberRepository(dataSource);
 //    }
+
+    /* TimeTraceAop를 SpringConfig를 통해 Bean으로 등록하는 방법
+    @Bean
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
+    }
+    */
 }
 
